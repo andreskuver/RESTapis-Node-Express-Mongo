@@ -1,15 +1,15 @@
 const mongoose = require("mongoose");
 
-const Todo = new mongoose.Schema(
+const Post = new mongoose.Schema(
   {
-    task: {
+    content: {
       type: String,
       required: true,
       trim: true,
-      maxlength: 30,
+      maxlength: 250,
     },
   },
   { timestamps: true }
 );
 
-module.exports = mongoose.model("Todo", Todo);
+module.exports = mongoose.model("Post", Post);
